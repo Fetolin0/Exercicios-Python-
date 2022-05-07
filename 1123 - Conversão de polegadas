@@ -1,0 +1,5 @@
+Qtd_Polegadas = float(input())
+
+Valor_CM = Qtd_Polegadas*2.54
+
+print("{:.3f}".format(Valor_CM))
