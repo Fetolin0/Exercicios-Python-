@@ -1,0 +1,13 @@
+n1 = int(input())
+
+def n_par(valor):
+    if valor%2 == 0:
+        return True
+    else:
+        return False
+
+
+if n_par(n1) == True:
+    print("{} {}".format(n1-1, n1+2))
+else:
+    print("{} {}".format(n1-2, n1+1))
