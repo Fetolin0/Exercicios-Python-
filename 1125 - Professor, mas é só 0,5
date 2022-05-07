@@ -1,0 +1,11 @@
+nota_trabalho = float(input())
+nota_prova = float(input())
+
+if (nota_trabalho + nota_prova) >= 12:
+    print("aprovado")
+else:
+    if nota_trabalho + 10 < 12:
+        print("reprovado")
+    else:
+        print("talvez com a sub")
+        
