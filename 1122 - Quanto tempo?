@@ -1,0 +1,7 @@
+Percurso_1 = int(input())
+Percurso_2 = int(input())
+Percurso_3 = int(input())
+
+Percurso_Total = Percurso_1 + Percurso_2 + Percurso_3 
+
+print("{} minutos".format(Percurso_Total)) 
