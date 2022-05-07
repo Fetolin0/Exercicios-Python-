@@ -1,0 +1,12 @@
+Preço_Mercadoria = float(input())
+Qtd_MercadoriaComprada = int(input())
+
+Desconto = 10
+Desconto_Item = 1
+
+Desconto_Total = float("0.{}".format(Desconto + (Desconto_Item*Qtd_MercadoriaComprada)) )
+Valor_Compra = Preço_Mercadoria*Qtd_MercadoriaComprada
+Valor_Desconto = Valor_Compra-(Valor_Compra*Desconto_Total)
+
+print("{:.2f}" . format(Valor_Compra) )
+print("{:.2f}". format(Valor_Desconto))
