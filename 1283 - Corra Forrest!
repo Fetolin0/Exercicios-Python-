@@ -1,0 +1,46 @@
+def tempo():
+   a = 1
+   lista = []
+   
+   while a > 0:
+       a = int(input())
+       if a > 0:
+           lista.append(a)
+       else:
+           break
+
+   return lista
+
+
+def media (lista):
+   tempo = 0
+   media = 0
+   
+   for tempo in range(len(lista)):
+       media = media+lista[tempo]
+   media = media/len(lista)
+
+   return media
+
+
+def abaixoMedia (lista, media):
+   abaixo_media = []
+   x = 0
+   for x in range(len(lista)):
+       if lista[x] < media:
+           abaixo_media.append(lista[x])
+
+   return abaixo_media
+
+
+lista = tempo()
+
+media = media(lista)
+
+menores = abaixoMedia(lista, media)
+
+print (f'MEDIA: {media:.2f}')
+
+for a in range (len(menores)):
+
+   print (f'{menores[a]}')
