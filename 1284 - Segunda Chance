@@ -1,0 +1,31 @@
+qnt_students = int(input())
+
+student_scores_list = [[], []]
+changed_scores = 0
+
+for student in range(0, qnt_students):
+    original_score = float(input())
+    student_scores_list[0].append(original_score)
+
+for student in range(0, qnt_students):
+    second_chance = float(input())
+    original_score = student_scores_list[0][student]
+    if second_chance == 10.00:
+        if original_score < 8:
+            final_score = "*({:03d}) original: {:05.2f} | final: {:05.2f}".format(student+1, original_score, original_score+2.00)
+            student_scores_list[1].append(final_score)
+            changed_scores += 1
+        elif original_score > 8 and original_score < 10:
+            final_score = "*({:03d}) original: {:05.2f} | final: 10.00".format(student+1, original_score)
+            student_scores_list[1].append(final_score)
+            changed_scores += 1
+        else:
+            final_score = "-({:03d}) original: {:05.2f} | final: 10.00".format(student+1, original_score)
+            student_scores_list[1].append(final_score)
+    else:
+        final_score = "-({:03d}) original: {:05.2f} | final: {:05.2f}".format(student+1, original_score, original_score)
+        student_scores_list[1].append(final_score)
+
+print("NOTAS ALTERADAS:", changed_scores)
+for student_score in student_scores_list[1]:
+    print(student_score)
